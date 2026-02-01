@@ -1,0 +1,95 @@
+
+.caja {
+  padding: 20px;                         /* espacio interno */
+  border: 5px solid rgb(207, 171, 198);   /* borde */
+  margin: 15px;                          /* espacio externo */
+}
+
+.caja img {
+  width: 200px;        /* tamaño real de la imagen */
+  height: auto;        /* mantiene proporción */
+  display: block;
+}
+
+.caja-relativa {
+  position: relative;
+  top: 20px;
+  padding: 20px;
+  border: 5px solid rgb(207, 171, 198);
+  margin: 15px;
+}
+
+.caja-relativa img {
+  width: 200px;
+  height: auto;
+  display: block;
+}
+
+.caja-absoluta {
+  position: absolute;
+  top: 20px;
+  right: 50px;
+
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  padding: 10px;
+  border: 2px solid rgb(207, 171, 198);
+}
+
+.caja-absoluta img {
+  width: 200px;
+  height: auto;
+  display: block;
+}
+
+.caja-absoluta p {
+  margin: 0;
+}
+
+.caja-fija {
+  position: fixed;
+  bottom: 10px;
+  left: 10px;
+
+  padding: 10px;
+  border: 2px solid rgb(207, 171, 198);
+}
+
+.caja-fija img {
+  width: 200px;
+  height: auto;
+  display: block;
+}
+
+.caja-sticky {
+  position: sticky;
+  top: 0;
+
+  background-color: white;   
+  padding: 15px;
+  border: 2px solid rgb(207, 171, 198);
+  margin-bottom: 20px;
+
+  z-index: 10;               /* evita superposición */
+}
+
+.caja-sticky img {
+  width: 200px;
+  height: auto;
+  display: block;
+}
+
+.caja span {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+p img {
+    width: 80px;
+    padding: 5px;
+    display: inline;
+    vertical-align: middle;
+}
+
