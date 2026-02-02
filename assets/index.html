@@ -23,13 +23,13 @@
 
    <div class="caja-absoluta">
      <img src="https://i.pinimg.com/originals/f1/d8/88/f1d888e3518eb38d5175d9c654cab23f.jpg" alt="🌺Prueba Box Model🌺">
-     <p><strong>Caja absoluta:</strong> Se despega del flujo y se coloca en coordenadas exactas dentro del contenedor.</span>
+     <p><strong>Caja absoluta:</strong> Se despega del flujo y se coloca en coordenadas exactas dentro del contenedor.</p>
    </div>
 
    
    <p>
     Este es un ejemplo de <strong>un elemento en línea</strong>
-   <a> <img src =https://www.pngmart.com/files/21/Aesthetic-Tape-PNG-Pic.png></a>
+   <a><img src="https://www.pngmart.com/files/21/Aesthetic-Tape-PNG-Pic.png" alt="Tape decorativo"></a>
    </p>
 
   
@@ -45,9 +45,91 @@
   <p><strong>Caja sticky:</strong> Se comporta como relativa hasta que llegas a cierto punto de scroll y luego se queda pegada.</p>
   </div>
 
+  <img class="img-float" src="https://i.pinimg.com/736x/b6/59/0d/b6590de55bc2f5cc9db3054dcff088e5.jpg" alt="Imagen flotante">
+  <p>
+   Este texto fluye alrededor de la imagen flotante. La propiedad float
+   permite integrar imágenes dentro del contenido de manera ordenada.
+  </p>
+
+  <div class="caja-block">Elemento block</div>
+
+   <h2>B. Propiedades Float y Clear</h2>
+   
+   <div class="contenedor-float">
+     
+     <img class="img-float-left" src="https://images.genius.com/42821fb186df6ab0504e2e245fcdea59.1000x1000x1.jpg" alt="Imagen flotante izquierda">
+     
+     <img class="img-float-right" src="https://images.genius.com/42821fb186df6ab0504e2e245fcdea59.1000x1000x1.jpg" alt="Imagen flotante derecha">
+     
+     <p>
+       <strong>Float left y right:</strong> Este texto fluye alrededor de las imágenes flotantes. 
+       La imagen de la izquierda tiene float: left y la de la derecha tiene float: right.
+       El contenido de texto se ajusta automáticamente alrededor de ellas.
+     </p>
+   </div>
+
+      <h2>C. Propiedad Display</h2>
+   
+   <!-- Display: block - Ocupa todo el ancho y empieza en nueva línea -->
+   <div class="display-block">
+     <strong>Display: block</strong> - Ocupa todo el ancho disponible y empieza en una nueva línea.
+   </div>
+
+   <!-- Display: inline - Los elementos fluyen en la misma línea -->
+   <span class="display-inline">Display: inline</span>
+   <span class="display-inline">Los elementos inline fluyen juntos</span>
+   <span class="display-inline">en la misma línea.</span>
+
+   <div>
+     <!-- Display: inline-block - Combina inline con capacidad de tener width/height -->
+     <span class="display-inline-block">Display: inline-block 1</span>
+     <span class="display-inline-block">Display: inline-block 2</span>
+     <span class="display-inline-block">Permite width/height pero fluyen en línea</span>
+   </div>
+
+    <p>Este párrafo tiene un span con <span class="display-none">display: none</span> (no lo verás porque está oculto).</p>
+
+     <h3>E. Propiedad Visibility</h3>
+   
+   <!-- Visibility: visible - El elemento es visible normalmente -->
+   <div class="visibility-visible">
+     <strong>Visibility: visible</strong> - Este elemento es visible normalmente.
+   </div>
+
+   <!-- Visibility: hidden - El elemento está oculto pero sigue ocupando su espacio -->
+   <div class="visibility-hidden">
+     <strong>Visibility: hidden</strong> - Este elemento está oculto pero sigue ocupando su espacio.
+   </div>
+
+   <div class="visibility-visible">
+     <strong>Nota:</strong> El elemento anterior está oculto pero ocupa espacio.
+   </div>
+
+      <h2>F. Propiedad Z-Index</h2>
+   
+   <!-- Contenedor para las cajas superpuestas -->
+   <div class="z-index-contenedor">
+     <!-- Z-index: 1 - Capa más baja, aparece debajo de las demás -->
+     <div class="caja-z1">
+       <strong>Z-index: 1</strong><br>
+       Capa inferior
+     </div>
+     <!-- Z-index: 2 - Capa media, aparece encima de z-index: 1 -->
+     <div class="caja-z2">
+       <strong>Z-index: 2</strong><br>
+       Capa media
+     </div>
+     <!-- Z-index: 3 - Capa más alta, aparece encima de todas -->
+     <div class="caja-z3">
+       <strong>Z-index: 3</strong><br>
+       Capa superior
+     </div>
+   </div>
+
+   <!-- Espacio adicional al final para permitir scroll -->
+   <div style="height: 100px;"></div>
+
+  
 </body>
-
-
-
 
 </html>

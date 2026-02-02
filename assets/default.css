@@ -1,4 +1,3 @@
-
 .caja {
   padding: 20px;                         /* espacio interno */
   border: 5px solid rgb(207, 171, 198);   /* borde */
@@ -93,3 +92,208 @@ p img {
     vertical-align: middle;
 }
 
+body {
+  position: relative;
+}
+
+.img-float {
+  float: left;
+  margin-right: 15px;
+  width: 150px;
+}
+
+.caja-block {
+  display: block;
+  width: 200px;
+  padding: 10px;
+  border: 2px solid rgb(207, 171, 198);
+}
+
+.contenedor-float {
+  border: 2px solid rgb(207, 171, 198);
+  padding: 15px;
+  margin: 15px;
+}
+
+/* Float: left - El elemento flota a la izquierda y el contenido fluye a su derecha */
+.img-float-left {
+  float: left;         
+  width: 150px;
+  margin-right: 15px;  
+  margin-bottom: 10px; 
+}
+
+/* Float: right - El elemento flota a la derecha y el contenido fluye a su izquierda */
+.img-float-right {
+  float: right;        
+  width: 150px;
+  margin-left: 15px;   
+  margin-bottom: 10px;
+}
+
+/* Clear: both - Cancela el efecto de los floats anteriores */
+.clear-ejemplo {
+  clear: both;  /* cancela floats de ambos lados (left y right) */
+  padding: 15px;
+  border: 2px solid rgb(207, 171, 198);
+  margin: 15px;
+  background-color: #f0f0f0;
+}
+
+.display-block {
+  display: block;  /* comportamiento de bloque */
+  width: 300px;    /* ancho específico */
+  padding: 10px;
+  border: 2px solid rgb(207, 171, 198);
+  margin: 10px 0;
+  background-color: #ffe6f0;
+}
+
+/* Display: inline - Los elementos fluyen en la misma línea */
+/* No respeta width/height */
+.display-inline {
+  display: inline;  
+  padding: 5px;
+  border: 2px solid rgb(207, 171, 198);
+  background-color: #fff0f5;
+}
+
+/* Display: inline-block - Combina inline (fluye en línea) con capacidad de tener width/height */
+.display-inline-block {
+  display: inline-block;  
+  width: 150px;           
+  padding: 10px;
+  border: 2px solid rgb(207, 171, 198);
+  margin: 5px;
+  background-color: #fce4ec;
+}
+
+/* Display: none - El elemento no se muestra ni ocupa espacio en el layout */
+.display-none {
+  display: none;  /* completamente oculto y sin ocupar espacio */
+}
+
+.overflow-visible {
+  width: 300px;
+  height: 80px;           /* altura limitada para forzar desbordamiento */
+  overflow: visible;      /* el contenido se sale del contenedor (default) */
+  border: 2px solid rgb(207, 171, 198);
+  padding: 10px;
+  margin: 15px 0;
+  background-color: #fff8e1;
+}
+
+/* Overflow: hidden - El contenido que se desborda se oculta */
+.overflow-hidden {
+  width: 300px;
+  height: 80px;
+  overflow: hidden;  /* oculta todo lo que se desborda */
+  border: 2px solid rgb(207, 171, 198);
+  padding: 10px;
+  margin: 15px 0;
+  background-color: #ffe4e1;
+}
+
+/* Overflow: scroll - Siempre muestra barras de desplazamiento */
+.overflow-scroll {
+  width: 300px;
+  height: 80px;
+  overflow: scroll;  /* siempre muestra barras (horizontal y vertical) */
+  border: 2px solid rgb(207, 171, 198);
+  padding: 10px;
+  margin: 15px 0;
+  background-color: #e1f5fe;
+}
+
+/* Overflow: auto - Muestra barras solo cuando el contenido se desborda */
+.overflow-auto {
+  width: 300px;
+  height: 80px;
+  overflow: auto;  /* barras aparecen automáticamente si es necesario */
+  border: 2px solid rgb(207, 171, 198);
+  padding: 10px;
+  margin: 15px 0;
+  background-color: #f1f8e9;
+}
+
+.visibility-visible {
+  visibility: visible;  /* el elemento es visible */
+  padding: 10px;
+  border: 2px solid rgb(207, 171, 198);
+  margin: 10px 0;
+  background-color: #e8f5e9;
+}
+
+/* Visibility: hidden - El elemento está oculto pero sigue ocupando su espacio */
+/* A diferencia de display: none, este SÍ ocupa espacio en el layout */
+.visibility-hidden {
+  visibility: hidden;  /* oculto pero ocupando espacio */
+  padding: 10px;
+  border: 2px solid rgb(207, 171, 198);
+  margin: 10px 0;
+  background-color: #ffebee;
+}
+
+.z-index-contenedor {
+  position: relative;  /* crea contexto para z-index de sus hijos */
+  height: 250px;
+  border: 2px dashed rgb(150, 150, 150);
+  margin: 15px;
+}
+
+/* Z-index: 1 - Capa más baja, aparecerá debajo de las demás */
+/* Z-index solo funciona en elementos con position (relative, absolute, fixed, sticky) */
+.caja-z1 {
+  position: absolute;  /* necesario para que funcione z-index */
+  top: 20px;
+  left: 20px;
+  width: 200px;
+  height: 100px;
+  padding: 15px;
+  background-color: rgba(255, 182, 193, 0.9);  /* rosa semi-transparente */
+  border: 2px solid rgb(207, 171, 198);
+  z-index: 1;  /* capa inferior */
+}
+
+/* Z-index: 2 - Capa media, aparecerá encima de z-index: 1 */
+.caja-z2 {
+  position: absolute;
+  top: 60px;
+  left: 80px;
+  width: 200px;
+  height: 100px;
+  padding: 15px;
+  background-color: rgba(173, 216, 230, 0.9);  /* azul claro semi-transparente */
+  border: 2px solid rgb(100, 149, 237);
+  z-index: 2;  /* capa media */
+}
+
+/* Z-index: 3 - Capa más alta, aparecerá encima de todas */
+.caja-z3 {
+  position: absolute;
+  top: 100px;
+  left: 140px;
+  width: 200px;
+  height: 100px;
+  padding: 15px;
+  background-color: rgba(152, 251, 152, 0.9);  /* verde claro semi-transparente */
+  border: 2px solid rgb(60, 179, 113);
+  z-index: 3;  /* capa superior - aparece encima de todo */
+}
+
+body {
+  position: relative;  /* permite usar position en elementos hijos */
+  padding: 20px;
+}
+
+h2 {
+  color: rgb(139, 69, 129); 
+  margin-top: 30px;
+  border-bottom: 2px solid rgb(207, 171, 198);  
+  padding-bottom: 10px;
+}
+
+.caja span {
+  display: inline-block;    
+  vertical-align: middle;  
+}
