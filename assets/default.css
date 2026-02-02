@@ -242,7 +242,7 @@ body {
 }
 
 /* Z-index: 1 - Capa más baja, aparecerá debajo de las demás */
-/* Z-index solo funciona en elementos con position (relative, absolute, fixed, sticky) */
+/* Z-index solo funciona en elementos con position*/
 .caja-z1 {
   position: absolute;  /* necesario para que funcione z-index */
   top: 20px;
@@ -250,7 +250,7 @@ body {
   width: 200px;
   height: 100px;
   padding: 15px;
-  background-color: rgba(255, 182, 193, 0.9);  /* rosa semi-transparente */
+  background-color: rgba(255, 182, 193, 0.9);  
   border: 2px solid rgb(207, 171, 198);
   z-index: 1;  /* capa inferior */
 }
@@ -268,7 +268,7 @@ body {
   z-index: 2;  /* capa media */
 }
 
-/* Z-index: 3 - Capa más alta, aparecerá encima de todas */
+/*Z-index: 3 - Capa más alta, aparecerá encima de todas*/
 .caja-z3 {
   position: absolute;
   top: 100px;
@@ -278,7 +278,7 @@ body {
   padding: 15px;
   background-color: rgba(152, 251, 152, 0.9);  /* verde claro semi-transparente */
   border: 2px solid rgb(60, 179, 113);
-  z-index: 3;  /* capa superior - aparece encima de todo */
+  z-index: 3;  
 }
 
 body {
