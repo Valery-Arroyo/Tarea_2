@@ -293,7 +293,125 @@ h2 {
   padding-bottom: 10px;
 }
 
-.caja span {
-  display: inline-block;    
-  vertical-align: middle;  
+.contenedor {
+    display: flex;
+    background: lightgray;
+    border: 2px solid gray;
+    padding: 10px;
+    margin-bottom: 15px;
+}
+
+.contenedor-alto {
+    display: flex;
+    background: lightgray;
+    border: 2px solid gray;
+    padding: 10px;
+    margin-bottom: 15px;
+    height: 120px;
+}
+
+.item {
+    background: pink;
+    padding: 15px;
+    margin: 5px;
+}
+
+.item-ancho {
+    background: lightblue;
+    padding: 15px;
+    margin: 5px;
+    min-width: 150px;
+}
+
+.item-grande {
+    background: lightcoral;
+    padding: 15px;
+    margin: 5px;
+    width: 250px;
+}
+
+
+.fila {
+    flex-direction: row;
+}
+
+.columna {
+    flex-direction: column;
+}
+
+.sin-envolver {
+    flex-wrap: nowrap;
+}
+
+.envolver {
+    flex-wrap: wrap;
+}
+
+.flujo {
+    flex-flow: row wrap;
+}
+
+.centrar {
+    justify-content: center;
+}
+
+.espacio-entre {
+    justify-content: space-between;
+}
+
+.alinear-centro {
+    align-items: center;
+}
+
+.contenido-centro {
+    align-content: center;
+}
+
+
+.orden-1 {
+    order: 1;
+}
+
+.orden-2 {
+    order: 2;
+}
+
+.orden-3 {
+    order: 3;
+}
+
+.crecer-1 {
+    flex-grow: 1;
+}
+
+.crecer-2 {
+    flex-grow: 2;
+}
+
+.encoger-0 {
+    flex-shrink: 0;
+}
+
+.encoger-1 {
+    flex-shrink: 1;
+}
+
+.base-100 {
+    flex-basis: 100px;
+}
+
+.base-200 {
+    flex-basis: 200px;
+}
+
+.flex-1 {
+    flex: 1;
+}
+
+.alinear-inicio {
+    align-self: flex-start;
+}
+
+.alinear-fin {
+    align-self: flex-end;
 }
