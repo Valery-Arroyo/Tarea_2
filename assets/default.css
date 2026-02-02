@@ -1,105 +1,143 @@
+/* === BOX MODEL Y POSICIONAMIENTO === */
+
 .caja {
-  padding: 20px;                         /* espacio interno */
-  border: 5px solid rgb(207, 171, 198);   /* borde */
-  margin: 15px;                          /* espacio externo */
+  padding: 15px;
+  border: 3px solid rgb(207, 171, 198);
+  margin: 10px;
+  background-color: white;
+  display: inline-block;
+  max-width: 300px;
 }
 
 .caja img {
-  width: 200px;        /* tamaño real de la imagen */
-  height: auto;        /* mantiene proporción */
+  width: 120px;
+  height: auto;
   display: block;
+}
+
+.caja span {
+  display: block;
+  margin-top: 10px;
+  font-size: 14px;
 }
 
 .caja-relativa {
   position: relative;
   top: 20px;
-  padding: 20px;
-  border: 5px solid rgb(207, 171, 198);
-  margin: 15px;
+  padding: 15px;
+  border: 3px solid rgb(207, 171, 198);
+  margin: 10px;
+  background-color: white;
+  display: inline-block;
+  max-width: 300px;
 }
 
 .caja-relativa img {
-  width: 200px;
+  width: 120px;
   height: auto;
   display: block;
+}
+
+.caja-relativa span {
+  display: block;
+  margin-top: 10px;
+  font-size: 14px;
 }
 
 .caja-absoluta {
   position: absolute;
   top: 20px;
   right: 50px;
-
   display: flex;
   align-items: center;
   gap: 10px;
-
   padding: 10px;
   border: 2px solid rgb(207, 171, 198);
+  background-color: rgba(255, 255, 255, 0.95);
+  max-width: 350px;
+  z-index: 5;
 }
 
 .caja-absoluta img {
-  width: 200px;
+  width: 100px;
   height: auto;
   display: block;
+  flex-shrink: 0;
 }
 
 .caja-absoluta p {
   margin: 0;
+  font-size: 13px;
 }
 
 .caja-fija {
   position: fixed;
   bottom: 10px;
   left: 10px;
-
-  padding: 10px;
+  padding: 8px;
   border: 2px solid rgb(207, 171, 198);
+  background-color: rgba(255, 255, 255, 0.95);
+  z-index: 100;
+  max-width: 250px;
 }
 
 .caja-fija img {
-  width: 200px;
+  width: 100px;
   height: auto;
   display: block;
+}
+
+.caja-fija p {
+  margin: 5px 0 0 0;
+  font-size: 12px;
 }
 
 .caja-sticky {
   position: sticky;
   top: 0;
-
-  background-color: white;   
-  padding: 15px;
+  background-color: white;
+  padding: 10px;
   border: 2px solid rgb(207, 171, 198);
-  margin-bottom: 20px;
-
-  z-index: 10;               /* evita superposición */
+  margin-bottom: 15px;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }
 
 .caja-sticky img {
-  width: 200px;
+  width: 100px;
   height: auto;
   display: block;
 }
 
-.caja span {
-  display: inline-block;
-  vertical-align: middle;
+.caja-sticky p {
+  margin: 0;
+  font-size: 13px;
 }
 
+/* Elemento en línea */
 p img {
-    width: 80px;
-    padding: 5px;
-    display: inline;
-    vertical-align: middle;
+  width: 60px;
+  padding: 3px;
+  display: inline;
+  vertical-align: middle;
 }
 
 body {
   position: relative;
+  padding: 20px;
+  background-color: #fff;
+  font-family: Arial, sans-serif;
 }
+
+/* === FLOAT Y CLEAR === */
 
 .img-float {
   float: left;
   margin-right: 15px;
-  width: 150px;
+  margin-bottom: 10px;
+  width: 120px;
 }
 
 .caja-block {
@@ -107,311 +145,357 @@ body {
   width: 200px;
   padding: 10px;
   border: 2px solid rgb(207, 171, 198);
+  margin: 15px 0;
+  background-color: #ffe6f0;
 }
 
 .contenedor-float {
   border: 2px solid rgb(207, 171, 198);
   padding: 15px;
-  margin: 15px;
+  margin: 15px 0;
+  overflow: auto;
+  background-color: white;
 }
 
-/* Float: left - El elemento flota a la izquierda y el contenido fluye a su derecha */
 .img-float-left {
-  float: left;         
-  width: 150px;
-  margin-right: 15px;  
-  margin-bottom: 10px; 
-}
-
-/* Float: right - El elemento flota a la derecha y el contenido fluye a su izquierda */
-.img-float-right {
-  float: right;        
-  width: 150px;
-  margin-left: 15px;   
+  float: left;
+  width: 120px;
+  margin-right: 15px;
   margin-bottom: 10px;
 }
 
-/* Clear: both - Cancela el efecto de los floats anteriores */
+.img-float-right {
+  float: right;
+  width: 120px;
+  margin-left: 15px;
+  margin-bottom: 10px;
+}
+
 .clear-ejemplo {
-  clear: both;  /* cancela floats de ambos lados (left y right) */
+  clear: both;
   padding: 15px;
   border: 2px solid rgb(207, 171, 198);
-  margin: 15px;
+  margin: 15px 0;
   background-color: #f0f0f0;
 }
 
+/* === DISPLAY === */
+
 .display-block {
-  display: block;  /* comportamiento de bloque */
-  width: 300px;    /* ancho específico */
+  display: block;
+  width: 300px;
   padding: 10px;
   border: 2px solid rgb(207, 171, 198);
   margin: 10px 0;
   background-color: #ffe6f0;
 }
 
-/* Display: inline - Los elementos fluyen en la misma línea */
-/* No respeta width/height */
 .display-inline {
-  display: inline;  
+  display: inline;
   padding: 5px;
   border: 2px solid rgb(207, 171, 198);
   background-color: #fff0f5;
+  margin: 2px;
 }
 
-/* Display: inline-block - Combina inline (fluye en línea) con capacidad de tener width/height */
 .display-inline-block {
-  display: inline-block;  
-  width: 150px;           
+  display: inline-block;
+  width: 150px;
   padding: 10px;
   border: 2px solid rgb(207, 171, 198);
   margin: 5px;
   background-color: #fce4ec;
 }
 
-/* Display: none - El elemento no se muestra ni ocupa espacio en el layout */
 .display-none {
-  display: none;  /* completamente oculto y sin ocupar espacio */
+  display: none;
 }
+
+/* === OVERFLOW === */
 
 .overflow-visible {
   width: 300px;
-  height: 80px;           /* altura limitada para forzar desbordamiento */
-  overflow: visible;      /* el contenido se sale del contenedor (default) */
+  height: 80px;
+  overflow: visible;
   border: 2px solid rgb(207, 171, 198);
   padding: 10px;
   margin: 15px 0;
   background-color: #fff8e1;
 }
 
-/* Overflow: hidden - El contenido que se desborda se oculta */
 .overflow-hidden {
   width: 300px;
   height: 80px;
-  overflow: hidden;  /* oculta todo lo que se desborda */
+  overflow: hidden;
   border: 2px solid rgb(207, 171, 198);
   padding: 10px;
   margin: 15px 0;
   background-color: #ffe4e1;
 }
 
-/* Overflow: scroll - Siempre muestra barras de desplazamiento */
 .overflow-scroll {
   width: 300px;
   height: 80px;
-  overflow: scroll;  /* siempre muestra barras (horizontal y vertical) */
+  overflow: scroll;
   border: 2px solid rgb(207, 171, 198);
   padding: 10px;
   margin: 15px 0;
   background-color: #e1f5fe;
 }
 
-/* Overflow: auto - Muestra barras solo cuando el contenido se desborda */
 .overflow-auto {
   width: 300px;
   height: 80px;
-  overflow: auto;  /* barras aparecen automáticamente si es necesario */
+  overflow: auto;
   border: 2px solid rgb(207, 171, 198);
   padding: 10px;
   margin: 15px 0;
   background-color: #f1f8e9;
 }
 
+/* === VISIBILITY === */
+
 .visibility-visible {
-  visibility: visible;  /* el elemento es visible */
+  visibility: visible;
   padding: 10px;
   border: 2px solid rgb(207, 171, 198);
   margin: 10px 0;
   background-color: #e8f5e9;
 }
 
-/* Visibility: hidden - El elemento está oculto pero sigue ocupando su espacio */
-/* A diferencia de display: none, este SÍ ocupa espacio en el layout */
 .visibility-hidden {
-  visibility: hidden;  /* oculto pero ocupando espacio */
+  visibility: hidden;
   padding: 10px;
   border: 2px solid rgb(207, 171, 198);
   margin: 10px 0;
   background-color: #ffebee;
 }
 
+/* === Z-INDEX === */
+
 .z-index-contenedor {
-  position: relative;  /* crea contexto para z-index de sus hijos */
+  position: relative;
   height: 250px;
   border: 2px dashed rgb(150, 150, 150);
-  margin: 15px;
+  margin: 15px 0;
+  background-color: white;
 }
 
-/* Z-index: 1 - Capa más baja, aparecerá debajo de las demás */
-/* Z-index solo funciona en elementos con position*/
 .caja-z1 {
-  position: absolute;  /* necesario para que funcione z-index */
+  position: absolute;
   top: 20px;
   left: 20px;
-  width: 200px;
-  height: 100px;
-  padding: 15px;
-  background-color: rgba(255, 182, 193, 0.9);  
+  width: 180px;
+  height: 90px;
+  padding: 10px;
+  background-color: rgba(255, 182, 193, 0.9);
   border: 2px solid rgb(207, 171, 198);
-  z-index: 1;  /* capa inferior */
+  z-index: 1;
+  font-size: 13px;
 }
 
-/* Z-index: 2 - Capa media, aparecerá encima de z-index: 1 */
 .caja-z2 {
   position: absolute;
   top: 60px;
   left: 80px;
-  width: 200px;
-  height: 100px;
-  padding: 15px;
-  background-color: rgba(173, 216, 230, 0.9);  /* azul claro semi-transparente */
+  width: 180px;
+  height: 90px;
+  padding: 10px;
+  background-color: rgba(173, 216, 230, 0.9);
   border: 2px solid rgb(100, 149, 237);
-  z-index: 2;  /* capa media */
+  z-index: 2;
+  font-size: 13px;
 }
 
-/*Z-index: 3 - Capa más alta, aparecerá encima de todas*/
 .caja-z3 {
   position: absolute;
   top: 100px;
   left: 140px;
-  width: 200px;
-  height: 100px;
-  padding: 15px;
-  background-color: rgba(152, 251, 152, 0.9);  /* verde claro semi-transparente */
+  width: 180px;
+  height: 90px;
+  padding: 10px;
+  background-color: rgba(152, 251, 152, 0.9);
   border: 2px solid rgb(60, 179, 113);
-  z-index: 3;  
+  z-index: 3;
+  font-size: 13px;
 }
 
-body {
-  position: relative;  /* permite usar position en elementos hijos */
-  padding: 20px;
+/* === TÍTULOS === */
+
+h1 {
+  color: rgb(139, 69, 129);
+  margin-top: 40px;
+  margin-bottom: 15px;
+  border-bottom: 3px solid rgb(207, 171, 198);
+  padding-bottom: 10px;
+  font-size: 24px;
 }
 
 h2 {
-  color: rgb(139, 69, 129); 
+  color: rgb(139, 69, 129);
   margin-top: 30px;
-  border-bottom: 2px solid rgb(207, 171, 198);  
-  padding-bottom: 10px;
+  margin-bottom: 15px;
+  border-bottom: 2px solid rgb(207, 171, 198);
+  padding-bottom: 8px;
+  font-size: 20px;
 }
 
+h3 {
+  color: rgb(139, 69, 129);
+  margin-top: 25px;
+  margin-bottom: 10px;
+  border-bottom: 2px solid rgb(207, 171, 198);
+  padding-bottom: 8px;
+  font-size: 18px;
+}
+
+/* === FLEXBOX === */
+
 .contenedor {
-    display: flex;
-    background: lightgray;
-    border: 2px solid gray;
-    padding: 10px;
-    margin-bottom: 15px;
+  display: flex;
+  background: #e0e0e0;
+  border: 2px solid #999;
+  padding: 10px;
+  margin-bottom: 15px;
 }
 
 .contenedor-alto {
-    display: flex;
-    background: lightgray;
-    border: 2px solid gray;
-    padding: 10px;
-    margin-bottom: 15px;
-    height: 120px;
+  display: flex;
+  background: #e0e0e0;
+  border: 2px solid #999;
+  padding: 10px;
+  margin-bottom: 15px;
+  height: 120px;
 }
 
 .item {
-    background: pink;
-    padding: 15px;
-    margin: 5px;
+  background: #ffb6c1;
+  padding: 15px;
+  margin: 5px;
+  border: 1px solid #ff69b4;
+  min-width: 50px;
+  text-align: center;
 }
 
 .item-ancho {
-    background: lightblue;
-    padding: 15px;
-    margin: 5px;
-    min-width: 150px;
+  background: #add8e6;
+  padding: 15px;
+  margin: 5px;
+  min-width: 120px;
+  border: 1px solid #4682b4;
+  text-align: center;
 }
 
 .item-grande {
-    background: lightcoral;
-    padding: 15px;
-    margin: 5px;
-    width: 250px;
+  background: #f08080;
+  padding: 15px;
+  margin: 5px;
+  width: 200px;
+  border: 1px solid #cd5c5c;
+  text-align: center;
 }
 
+/* Para el ejemplo de flex-shrink */
+.item-grande:first-child {
+  flex-shrink: 0;
+}
 
+.item-grande:last-child {
+  flex-shrink: 1;
+}
+
+/* Propiedades del contenedor flex */
 .fila {
-    flex-direction: row;
+  flex-direction: row;
 }
 
 .columna {
-    flex-direction: column;
+  flex-direction: column;
 }
 
 .sin-envolver {
-    flex-wrap: nowrap;
+  flex-wrap: nowrap;
 }
 
 .envolver {
-    flex-wrap: wrap;
+  flex-wrap: wrap;
 }
 
 .flujo {
-    flex-flow: row wrap;
+  flex-flow: row wrap;
 }
 
 .centrar {
-    justify-content: center;
+  justify-content: center;
 }
 
 .espacio-entre {
-    justify-content: space-between;
+  justify-content: space-between;
 }
 
 .alinear-centro {
-    align-items: center;
+  align-items: center;
 }
 
 .contenido-centro {
-    align-content: center;
+  align-content: center;
 }
 
-
+/* Propiedades de los items flex */
 .orden-1 {
-    order: 1;
+  order: 1;
 }
 
 .orden-2 {
-    order: 2;
+  order: 2;
 }
 
 .orden-3 {
-    order: 3;
+  order: 3;
 }
 
 .crecer-1 {
-    flex-grow: 1;
+  flex-grow: 1;
 }
 
 .crecer-2 {
-    flex-grow: 2;
+  flex-grow: 2;
 }
 
 .encoger-0 {
-    flex-shrink: 0;
+  flex-shrink: 0;
 }
 
 .encoger-1 {
-    flex-shrink: 1;
+  flex-shrink: 1;
 }
 
 .base-100 {
-    flex-basis: 100px;
+  flex-basis: 100px;
 }
 
 .base-200 {
-    flex-basis: 200px;
+  flex-basis: 200px;
 }
 
 .flex-1 {
-    flex: 1;
+  flex: 1;
 }
 
 .alinear-inicio {
-    align-self: flex-start;
+  align-self: flex-start;
 }
 
 .alinear-fin {
-    align-self: flex-end;
+  align-self: flex-end;
+}
+
+p {
+  margin: 10px 0;
+  line-height: 1.5;
+  font-size: 14px;
+}
+
+strong {
+  color: rgb(139, 69, 129);
 }
